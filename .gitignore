@@ -6,6 +6,6 @@ __pycache__
 db.*
 
 
-docker-compose.yml
-Dockerfile
+./docker-compose.yml
+./Dockerfile
 db/
