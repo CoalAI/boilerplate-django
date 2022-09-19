@@ -35,10 +35,18 @@ python3 manage.py migrate
 set DEBUG = 1 in **.env**
 #### Running the project
 ```python3 manage.py runserver```
-
+#### Deployment
+```
+cp deploy/dev/* .
+docker-compose up -d
+```
+to stop the containers:
+```
+docker-compose down
+```
 
 
 ## Production
 #### Running the project
 ```python3 manage.py runserver```
-#### Deployment
+
