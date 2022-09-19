@@ -22,12 +22,12 @@ python3 manage.py migrate
 <br /> you may set the following variables inside **.env** file to configure any database
 <br /> by **default** it uses **sqlite**
 ```  
-  ENGINE="django.db.backends.postgresql"
-  NAME="mydatabase"
-  USER="mydatabaseuser"
-  PASSWORD="mypassword"
-  HOST="127.0.0.1"
-  PORT="5432"
+  DB_ENGINE="django.db.backends.postgresql"
+  DB_NAME="mydatabase"
+  DB_USER="mydatabaseuser"
+  DB_PASSWORD="mypassword"
+  DB_HOST="127.0.0.1"
+  DB_PORT="5432"
 ```
 
 
@@ -48,5 +48,5 @@ docker-compose down
 
 ## Production
 #### Running the project
-```python3 manage.py runserver```
+```gunicorn project.wsgi -b 0.0.0.0:8000```
 
