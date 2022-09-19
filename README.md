@@ -3,4 +3,31 @@ This is Django boiler plate.
 
 
 ### Setup / Initialize the project
-``` ./setup.sh ```
+```  
+    python3 -m venv venv
+```
+```
+    source venv/bin/activate
+```
+```
+    ./setup.sh
+```
+<br/> make sure to update the contents of the .env file that is generated in setup 1
+<br/>
+``` 
+python3 manage.py makemigrations 
+python3 manage.py migrate 
+```
+
+
+## Development
+set DEBUG = 1 in **.env**
+#### Running the project
+```python3 manage.py runserver```
+
+
+
+## Production
+#### Running the project
+```python3 manage.py runserver```
+#### Deployment
