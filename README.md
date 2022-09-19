@@ -18,6 +18,17 @@ This is Django boiler plate.
 python3 manage.py makemigrations 
 python3 manage.py migrate 
 ```
+#### Database
+<br /> you may set the following variables inside **.env** file to configure any database
+<br /> by **default** it uses **sqlite**
+```  
+  ENGINE="django.db.backends.postgresql"
+  NAME="mydatabase"
+  USER="mydatabaseuser"
+  PASSWORD="mypassword"
+  HOST="127.0.0.1"
+  PORT="5432"
+```
 
 
 ## Development
