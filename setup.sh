@@ -1,5 +1,5 @@
-python3 -m venv venv
-source venv/bin/activate
+#!/bin/bash
 pip install -r requirements.txt
-pre-commit install
 cp env-sample .env
+echo "ENTER PASSWORD:" && read -s PASSWORD
+echo $PASSWORD | sudo pre-commit install
