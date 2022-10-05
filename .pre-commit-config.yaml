@@ -15,7 +15,15 @@ repos:
     -   id: check-merge-conflict
     -   id: flake8
         args: [--max-line-length=160]
+        exclude: (migrations)
+    -   id: no-commit-to-branch
+        args: [--branch, staging, --branch, main, --branch, prod]
 -   repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
     - id: isort
+-   repo: https://github.com/dimaka-wix/commit-msg-hook.git
+    rev: v0.3.4
+    hooks:
+    -   id: commit-msg-hook
+        stages: [commit-msg]
