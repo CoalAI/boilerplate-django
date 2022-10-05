@@ -71,7 +71,6 @@ the testing is based on **pytest** library
 <li><a href="https://www.djangoproject.com/">django core documentation</a></li>
 <li><a href="https://github.com/dimaka-wix/commit-msg-hook">commit-msg</a></li>
 <li><a href="https://pre-commit.com/hooks.html" >pre-commit supported hooks</a></li>
-<li><a href="https://pre-commit.com/hooks.html" >pre-commit supported hooks</a></li>
 <li><a href="https://pytest-django.readthedocs.io/en/latest/database.html">pytest</a></li>
 <li><a href="https://github.com/quiqua/pytest-dotenv">pytest-dotenv</a></li>
 </ul>
