@@ -10,6 +10,7 @@ This is Django boiler plate.
     source venv/bin/activate
 ```
 ```
+    sudo chown -R $USER:$USER .
     ./setup.sh
 ```
 <br/> make sure to update the contents of the .env file that is generated in setup 1
@@ -34,7 +35,9 @@ python3 manage.py migrate
 ## Development
 set DEBUG = 1 in **.env**
 #### Running the project
-```python3 manage.py runserver```
+```
+python3 manage.py runserver
+```
 #### Deployment
 ```
 cp deploy/dev/* .
@@ -48,4 +51,6 @@ docker-compose down
 
 ## Production
 #### Running the project
-```gunicorn project.wsgi -b 0.0.0.0:8000```
+```
+gunicorn project.wsgi -b 0.0.0.0:8000
+```
