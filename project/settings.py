@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'django_rest_passwordreset',
     # apps
-    'interface'
+    'interface.apps.InterfaceConfig'
 ]
 
 MIDDLEWARE = [
