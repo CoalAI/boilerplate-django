@@ -25,6 +25,7 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": env('PAGE_SIZE', 10),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
     )
 }
 
@@ -42,8 +43,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
-    # apps
-    'interface'
+    'rest_framework.authtoken',
+    'interface',
+    'authemail'
 ]
 
 MIDDLEWARE = [
@@ -73,14 +75,13 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages'
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -170,3 +171,15 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=120),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=7),
 }
+
+AUTH_USER_MODEL = 'interface.MyUser'
+
+EMAIL_FROM = env('Email')
+EMAIL_BCC = env('Email')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST_USER = env('Email')
+EMAIL_HOST_PASSWORD = env('Password')

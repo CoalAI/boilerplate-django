@@ -1,0 +1,4 @@
+{% load env_extras %}
+
+Verify your email address by clicking on this link:
+    {% get_env_var %}/api/accounts/signup/verify.html/?code={{ code }}

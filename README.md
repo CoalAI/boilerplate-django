@@ -21,6 +21,11 @@ python3 manage.py migrate
 ```
 
 
+### Email Verify Endpoints
+The following endpoints are provided:  
+1. POST api/accounts/signup - signs up user and send email verification  
+
+
 #### Database
 <br /> you may set the following variables inside **.env** file to configure any database
 <br /> by **default** it uses **sqlite**
@@ -77,4 +82,5 @@ the testing is based on **pytest** library
 <li><a href="https://pre-commit.com/hooks.html" >pre-commit supported hooks</a></li>
 <li><a href="https://pytest-django.readthedocs.io/en/latest/database.html">pytest</a></li>
 <li><a href="https://github.com/quiqua/pytest-dotenv">pytest-dotenv</a></li>
+<li><a href="https://pypi.org/project/django-rest-authemail/">django-rest-authemail </a></li>
 </ul>
