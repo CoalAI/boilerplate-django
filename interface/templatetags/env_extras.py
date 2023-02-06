@@ -5,5 +5,10 @@ register = template.Library()
 
 
 @register.simple_tag
-def get_env_var():
+def get_baseurl():
     return env("url")
+
+
+@register.simple_tag
+def get_resetlink():
+    return env("resetlink")
