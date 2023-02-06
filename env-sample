@@ -15,5 +15,4 @@ DB_PORT="5432"
 #email config
 Email = "myemail"
 password = "mypassword"
-resetlink = "link for reset password"
 url = "base url"

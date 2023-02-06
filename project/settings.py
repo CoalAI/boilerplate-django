@@ -183,5 +183,3 @@ EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 EMAIL_HOST_USER = env('Email')
 EMAIL_HOST_PASSWORD = env('Password')
-EMAIL_TRIES = 1
-RESETLINK = env('resetlink')
