@@ -20,13 +20,6 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-### Reset Password Endpoints
-The following endpoints are provided:  
-1. POST api/password_reset/ - request a reset password token by using the email parameter  
-2. POST api/password_reset/confirm/ - using a valid token, the users password is set to the provided password  
-3. POST api/password_reset/validate_token/ - will return a 200 if a given token is valid
-
-
 #### Database
 <br /> you may set the following variables inside **.env** file to configure any database
 <br /> by **default** it uses **sqlite**
@@ -83,5 +76,4 @@ the testing is based on **pytest** library
 <li><a href="https://pre-commit.com/hooks.html" >pre-commit supported hooks</a></li>
 <li><a href="https://pytest-django.readthedocs.io/en/latest/database.html">pytest</a></li>
 <li><a href="https://github.com/quiqua/pytest-dotenv">pytest-dotenv</a></li>
-<li><a href="https://pypi.org/project/django-rest-passwordreset/">django-rest-passwordreset</a></li>
 </ul>

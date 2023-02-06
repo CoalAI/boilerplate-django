@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'django_rest_passwordreset',
     # apps
-    'interface.apps.InterfaceConfig'
+    'interface'
 ]
 
 MIDDLEWARE = [
@@ -171,13 +171,3 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=120),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=7),
 }
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_SSL = True
-EMAIL_PORT = 465
-EMAIL_HOST_USER = env('Email')
-EMAIL_HOST_PASSWORD = env('Password')
-EMAIL_TRIES = 1
-RESETLINK = env('resetlink')
