@@ -177,7 +177,7 @@ AUTH_USER_MODEL = 'interface.MyUser'
 EMAIL_FROM = env('Email')
 EMAIL_BCC = env('Email')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
