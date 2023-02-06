@@ -75,15 +75,13 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'project.context_processor.context',
+                'django.contrib.messages.context_processors.messages'
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
-CONTEXT = {'url': 'localhost:3000'}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -179,7 +177,7 @@ AUTH_USER_MODEL = 'interface.MyUser'
 EMAIL_FROM = env('Email')
 EMAIL_BCC = env('Email')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
