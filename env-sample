@@ -13,7 +13,7 @@ DB_HOST="127.0.0.1"
 DB_PORT="5432"
 
 #email config
-Email = "myemail"
-password = "mypassword"
-url = "base url"
-resetlink = "link to reset password"
+Email="myemail"
+password="mypassword"
+url="base url"
+resetlink="link to reset password"

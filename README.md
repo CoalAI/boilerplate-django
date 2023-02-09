@@ -54,7 +54,14 @@ python3 manage.py runserver
 #### Deployment
 ```
 cp deploy/dev/* .
-docker-compose up -d
+```
+If you have not configured your database for deployment then run this command to start containers:
+```
+docker-compose -f docker-compose-sql.yml up -d
+```
+otherwise:
+```
+docker-compose -f docker-compose.yml up -d
 ```
 to stop the containers:
 ```
