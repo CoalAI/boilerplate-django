@@ -26,10 +26,14 @@ The following endpoints are provided:
 1. POST api/accounts/signup - signs up user and send email verification  
 
 
-### Email Verify Endpoints
+### Password Reset Endpoints
 The following endpoints are provided:  
 1. POST api/accounts/password/reset - sends email to user for password reset. Email has link for password reset page and code to reset password. You have to add reset link in env file as given in env-sample.
 2. POST api/accounts/password/reset/verified - takes new password and code (sent via email) and updates password  
+
+
+### Login/Signup through Google
+1. auth/google/login/ - shows signup through google screen. You need to update LOGIN_REDIRECT_URL in settings. Follow <a href="https://www.codesnail.com/google-authentication-in-django/">this</a> tutorial to generate Client ID and Client Secret and how to set them in admin.
 
 
 #### Database

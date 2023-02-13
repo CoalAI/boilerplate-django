@@ -45,7 +45,12 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'interface',
-    'authemail'
+    'authemail',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google'
 ]
 
 MIDDLEWARE = [
@@ -183,3 +188,27 @@ EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 EMAIL_HOST_USER = env('Email')
 EMAIL_HOST_PASSWORD = env('Password')
+
+# google auth settings
+
+SITE_ID = 3
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+
+LOGIN_REDIRECT_URL = '/'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
