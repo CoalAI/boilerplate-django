@@ -26,10 +26,15 @@ The following endpoints are provided:
 1. POST api/accounts/signup - signs up user and send email verification  
 
 
-### Email Verify Endpoints
+### Password Reset Endpoints
 The following endpoints are provided:  
 1. POST api/accounts/password/reset - sends email to user for password reset. Email has link for password reset page and code to reset password. You have to add reset link in env file as given in env-sample.
 2. POST api/accounts/password/reset/verified - takes new password and code (sent via email) and updates password  
+
+
+### Login/Signup through Google
+1. api/social-auth/ - shows signup/login through google screen and redirects to your frontend home page if login/signup is succssfull.  
+You need to add LOGIN_REDIRECT_URL, SOCIAL_AUTH_GOOGLE_OAUTH2_KEY and SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET in your .env file. Follow <a href="https://theonetechnologies.com/blog/post/how-to-get-google-app-client-id-and-client-secret">this</a> tutorial to generate Client ID and Client Secret. Add **BASE_URL_OF_YOUR_APP/accounts/complete/google-oauth2/** in Authorized Redirect URIs.
 
 
 #### Database
@@ -95,5 +100,6 @@ the testing is based on **pytest** library
 <li><a href="https://pre-commit.com/hooks.html" >pre-commit supported hooks</a></li>
 <li><a href="https://pytest-django.readthedocs.io/en/latest/database.html">pytest</a></li>
 <li><a href="https://github.com/quiqua/pytest-dotenv">pytest-dotenv</a></li>
-<li><a href="https://pypi.org/project/django-rest-authemail/">django-rest-authemail </a></li>
+<li><a href="https://pypi.org/project/django-rest-authemail/">django-rest-authemail</a></li>
+<li><a href="https://pypi.org/project/social-auth-app-django/#description">social-auth-app-django</a></li>
 </ul>

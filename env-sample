@@ -17,3 +17,8 @@ Email="myemail"
 password="mypassword"
 url="base url"
 resetlink="link to reset password"
+
+#google oauth config
+LOGIN_REDIRECT_URL="frontend home page url"
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY='your google client id'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='your google client secret'
