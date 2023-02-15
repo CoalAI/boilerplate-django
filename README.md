@@ -100,5 +100,6 @@ the testing is based on **pytest** library
 <li><a href="https://pre-commit.com/hooks.html" >pre-commit supported hooks</a></li>
 <li><a href="https://pytest-django.readthedocs.io/en/latest/database.html">pytest</a></li>
 <li><a href="https://github.com/quiqua/pytest-dotenv">pytest-dotenv</a></li>
-<li><a href="https://pypi.org/project/django-rest-authemail/">django-rest-authemail </a></li>
+<li><a href="https://pypi.org/project/django-rest-authemail/">django-rest-authemail</a></li>
+<li><a href="https://pypi.org/project/social-auth-app-django/#description">social-auth-app-django</a></li>
 </ul>
