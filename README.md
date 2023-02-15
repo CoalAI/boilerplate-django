@@ -33,7 +33,8 @@ The following endpoints are provided:
 
 
 ### Login/Signup through Google
-1. auth/google/login/ - shows signup through google screen. You need to update LOGIN_REDIRECT_URL in settings. Follow <a href="https://www.codesnail.com/google-authentication-in-django/">this</a> tutorial to generate Client ID and Client Secret and how to set them in admin.
+1. api/social-auth/ - shows signup/login through google screen and redirects to your frontend home page if login/signup is succssfull.  
+You need to add LOGIN_REDIRECT_URL, SOCIAL_AUTH_GOOGLE_OAUTH2_KEY and SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET in your .env file. Follow <a href="https://theonetechnologies.com/blog/post/how-to-get-google-app-client-id-and-client-secret">this</a> tutorial to generate Client ID and Client Secret. Add **BASE_URL_OF_YOUR_APP/accounts/complete/google-oauth2/** in Authorized Redirect URIs.
 
 
 #### Database
