@@ -1,4 +1,4 @@
 {% load env_extras %}
 
 Verify your email address by clicking on this link:
-{% get_baseurl %}/api/accounts/signup/verify/?code={{ code }}
+{% get_baseurl %}/api/signup/verify/?code={{ code }}
