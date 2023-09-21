@@ -45,8 +45,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'interface',
-    'authemail',
-    'social_django'
+    'authemail'
 ]
 
 MIDDLEWARE = [
@@ -57,8 +56,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'social_django.middleware.SocialAuthExceptionMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 
@@ -77,9 +75,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'social_django.context_processors.backends',  
-                'social_django.context_processors.login_redirect'
+                'django.contrib.messages.context_processors.messages'
             ],
         },
     },
@@ -190,11 +186,7 @@ EMAIL_HOST_PASSWORD = env('Password')
 
 # google auth settings
 
-AUTHENTICATION_BACKENDS = [
-    'social_core.backends.google.GoogleOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-]
-
-LOGIN_REDIRECT_URL = env('LOGIN_REDIRECT_URL')
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = env('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
+GOOGLE_OAUTH2_REDIRECT_URI = env('LOGIN_REDIRECT_URL')
+GOOGLE_OAUTH2_CLIENT_ID = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+GOOGLE_OAUTH2_CLIENT_SECRET = env('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
+FRONTEND_REDIRECT_URL= env('FRONTEND_REDIRECT_URL')
