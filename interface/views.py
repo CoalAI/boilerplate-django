@@ -1,12 +1,15 @@
+import requests
+from urllib.parse import urlencode
 from django.conf import settings
+from django.http import HttpResponseRedirect
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-import requests
-from .models import MyUser
+from rest_framework.generics import RetrieveUpdateAPIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.http import HttpResponseRedirect
-from urllib.parse import urlencode
+from .models import MyUser
+from .serializers import UserProfileUpdateSerializer, UserProfileRetrieveSerializer
 
 class GoogleLoginView(APIView):
     def get(self, request):
@@ -72,3 +75,15 @@ class GoogleCallbackView(APIView):
 
             return HttpResponseRedirect(redirect_url)
         return Response({'detail': 'Authentication failed'}, status=status.HTTP_400_BAD_REQUEST)
+
+class UserProfileUpdateView(RetrieveUpdateAPIView):
+    permission_classes = [IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return UserProfileRetrieveSerializer
+        else:
+            return UserProfileUpdateSerializer
+
+    def get_object(self):
+        return self.request.user
