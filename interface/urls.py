@@ -1,6 +1,7 @@
 from django.urls import path, include
 from rest_framework_simplejwt.views import (TokenObtainPairView,
                                             TokenRefreshView)
+from . import views
 from django.urls import reverse_lazy
 from django.views.generic import RedirectView
 from authemail.views import (PasswordReset, PasswordResetVerified,
@@ -15,6 +16,9 @@ urlpatterns = [
     path('password/reset/', PasswordReset.as_view(), name='password-reset'),
     path('password/reset/verified/', PasswordResetVerified.as_view(), name='password-reset-verified'),
     path('password/change/', PasswordChange.as_view(), name='password-change'),
+    path('accounts/', include('authemail.urls')),
+    path('google-login/', views.GoogleLoginView.as_view(), name='google_login'),
+    path('google-callback/', views.GoogleCallbackView.as_view(), name='google_callback'),
     path('signup/', Signup.as_view(), name="signup"),
     path('social-auth/', RedirectView.as_view(url=reverse_lazy('social:begin', args=['google-oauth2'])), name='social-auth'),
     path('accounts/', include('authemail.urls')),

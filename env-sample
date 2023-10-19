@@ -19,6 +19,7 @@ url="base url"
 resetlink="link to reset password"
 
 #google oauth config
-LOGIN_REDIRECT_URL="frontend home page url"
+LOGIN_REDIRECT_URL="base url of backend + /api/google-callback"
+FRONTEND_REDIRECT_URL="login/home page url of frontend"
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY='your google client id'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='your google client secret'
