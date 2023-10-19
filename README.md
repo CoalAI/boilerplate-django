@@ -33,8 +33,8 @@ The following endpoints are provided:
 
 
 ### Login/Signup through Google
-1. api/social-auth/ - shows signup/login through google screen and redirects to your frontend home page if login/signup is succssfull.  
-You need to add LOGIN_REDIRECT_URL, SOCIAL_AUTH_GOOGLE_OAUTH2_KEY and SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET in your .env file. Follow <a href="https://theonetechnologies.com/blog/post/how-to-get-google-app-client-id-and-client-secret">this</a> tutorial to generate Client ID and Client Secret. Add **BASE_URL_OF_YOUR_APP/accounts/complete/google-oauth2/** in Authorized Redirect URIs.
+1. api/google-login/ - shows signup/login through google screen and redirects to your frontend home page if login/signup is succssfull.  
+You need to add LOGIN_REDIRECT_URL, FRONTEND_REDIRECT_URL, SOCIAL_AUTH_GOOGLE_OAUTH2_KEY and SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET in your .env file. Follow <a href="https://theonetechnologies.com/blog/post/how-to-get-google-app-client-id-and-client-secret">this</a> tutorial to generate Client ID and Client Secret. LOGIN_REDIRECT_URL will be **BASE_URL_OF_DJANGO_APP/api/google-callback/** and also add this in Authorized Redirect URIs when creating credentials.
 
 
 #### Database
@@ -101,5 +101,4 @@ the testing is based on **pytest** library
 <li><a href="https://pytest-django.readthedocs.io/en/latest/database.html">pytest</a></li>
 <li><a href="https://github.com/quiqua/pytest-dotenv">pytest-dotenv</a></li>
 <li><a href="https://pypi.org/project/django-rest-authemail/">django-rest-authemail</a></li>
-<li><a href="https://pypi.org/project/social-auth-app-django/#description">social-auth-app-django</a></li>
 </ul>
